@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爬虫实时监控</title>
+  <style>
+    body { font-family: system-ui; margin: 20px; background: #f3f4f6; }
+    .controls { display: flex; gap: 10px; margin-bottom: 15px; }
+    button { padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; }
+    .btn-start { background: #2563eb; color: white; }
+    .btn-stop { background: #dc2626; color: white; }
+    #urls { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    #log { height: 500px; overflow: auto; background: white; border: 1px solid #ddd; padding: 10px; border-radius: 4px; }
+    .log-item { padding: 6px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+    .time { color: #6b7280; margin-right: 10px; }
+    .url { color: #2563eb; margin-right: 10px; }
+    #status { margin: 10px 0; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>爬虫监控面板</h2>
+  <div class="controls">
+    <input id="urls" type="text" placeholder="每行一个网址" value="https://example.com">
+    <button class="btn-start" id="start">开始</button>
+    <button class="btn-stop" id="stop">停止</button>
+  </div>
+  <div id="status">就绪</div>
+  <div id="log"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
